@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { formatNumber, formatDateTime, formatMessage, generateKeyFromString } from 'i18n-kit';
+// import { formatNumber, formatDateTime, formatMessage } from 'i18n-kit';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,57 +7,56 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      locale: 'en-US'
+      currentLocale: this.props.myI18n.locale
     };
   }
 
   handleChangeToDE = () => {
-    this.setState({ locale: 'de-DE' });
+    this.props.myI18n.setLocale('de-DE');
+    this.setState({ currentLocale: 'de-DE' });
   };
 
   handleChangeToEN = () => {
-    this.setState({ locale: 'en-US' });
+    this.props.myI18n.setLocale('en-US');
+    this.setState({ currentLocale: 'en-US' });
+  };
+
+  handleChangeToDefault = () => {
+    this.props.myI18n.setLocaleToDefault();
+    this.setState({ currentLocale: 'default' });
   };
 
   render() {
+    const { myI18n } = this.props;
     // TODO: global festlegen
-    const { locale } = this.state;
+    const { currentLocale } = this.state;
 
-    const number = formatNumber(locale, 3500);
-    const money = formatNumber(locale, 29.99, { style: 'currency', currency: 'USD' });
+    const number = myI18n.formatNumber(3500);
+    const money = myI18n.formatNumber(29.99, { style: 'currency', currency: 'USD' });
 
-    const now = formatDateTime(locale, new Date());
-    const nowInPerth = formatDateTime(locale, new Date(), {
+    const now = myI18n.formatDateTime(new Date(), {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    });
+    const nowWithTime = myI18n.formatDateTime(new Date());
+    const nowInPerth = myI18n.formatDateTime(new Date(), {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric',
       timeZone: 'Australia/Perth',
       timeZoneName: 'short'
     });
-    const nowWithTime = formatDateTime(locale, new Date(), {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      weekday: 'long'
-    });
 
-    const defaultMessage = 'This is {num1} test for {num2}.';
-    const messageKey = generateKeyFromString(defaultMessage);
-    const messages = {
-      'de-DE': { [messageKey]: 'Dies ist {num1} ein Test für {num2}.' },
-      'en-US': { [messageKey]: 'This is {num1} test for {num2}.' }
-    };
-    const testText = formatMessage(locale, messages, 'This is {num1} test for {num2}.', {
+    const testText = myI18n.formatMessage('This is {num1} test for {num2}.', {
       vars: {
         num1: 1,
         num2: 2
       }
     });
-    const failingTestText = formatMessage(locale, messages, 'This is another test.', {
+    const failingTestText = myI18n.formatMessage('This is another test.', {
       defaultLocale: 'en-US'
+      // disableWarnings: true
     });
 
     return (
@@ -72,8 +71,8 @@ class App extends Component {
         <button
           onClick={this.handleChangeToDE}
           style={{
-            background: locale === 'de-DE' && 'blue',
-            color: locale === 'de-DE' && '#fff'
+            background: myI18n.locale === 'de-DE' && 'blue',
+            color: myI18n.locale === 'de-DE' && '#fff'
           }}
         >
           DE
@@ -81,11 +80,20 @@ class App extends Component {
         <button
           onClick={this.handleChangeToEN}
           style={{
-            background: locale === 'en-US' && 'blue',
-            color: locale === 'en-US' && '#fff'
+            background: myI18n.locale === 'en-US' && 'blue',
+            color: myI18n.locale === 'en-US' && '#fff'
           }}
         >
           EN
+        </button>
+        <button
+          onClick={this.handleChangeToDefault}
+          style={{
+            background: currentLocale === 'default' && 'blue',
+            color: currentLocale === 'default' && '#fff'
+          }}
+        >
+          Browser Default: {myI18n.defaultLocale}
         </button>
         <h3>Numbers</h3>
         <p>{number}</p>
