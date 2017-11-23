@@ -48,6 +48,9 @@ class App extends Component {
       timeZoneName: 'short'
     });
 
+    // const fm = myI18n.formatMessage;
+    const fm = (strings, ...rest) => console.log(strings, rest);
+
     const testText = myI18n.formatMessage('This is {num1} test for {num2}.', {
       vars: {
         num1: 1,
@@ -55,7 +58,7 @@ class App extends Component {
       }
     });
     const failingTestText = myI18n.formatMessage('This is another test.', {
-      defaultLocale: 'en-US'
+      messageLocale: 'en-US'
       // disableWarnings: true
     });
 
@@ -105,6 +108,7 @@ class App extends Component {
         <h3>Text</h3>
         <p>{testText}</p>
         <p>{failingTestText}</p>
+        <p>{fm`${0}Text formatted ${1} with ${2} tagged template literal`}</p>
       </div>
     );
   }
