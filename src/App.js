@@ -49,15 +49,16 @@ class App extends Component {
     });
 
     // const fm = myI18n.formatMessage;
-    const fm = (strings, ...rest) => console.log(strings, rest);
+    // const fm = (strings, ...rest) => console.log(strings, rest);
 
-    const testText = myI18n.formatMessage('This is {num1} test for {num2}.', {
-      vars: {
+    const testText = myI18n.formatMessage(
+      myI18n.translateMessage('This is {num1} test for {num2}.'),
+      {
         num1: 1,
         num2: 2
       }
-    });
-    const failingTestText = myI18n.formatMessage('This is another test.', {
+    );
+    const failingTestText = myI18n.translateMessage('This is another test.', {
       messageLocale: 'en-US'
       // disableWarnings: true
     });
@@ -108,7 +109,7 @@ class App extends Component {
         <h3>Text</h3>
         <p>{testText}</p>
         <p>{failingTestText}</p>
-        <p>{fm`${0}Text formatted ${1} with ${2} tagged template literal`}</p>
+        {/* <p>{fm`${0}Text formatted ${1} with ${2} tagged template literal`}</p> */}
       </div>
     );
   }

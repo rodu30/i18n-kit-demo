@@ -1,1 +1,1 @@
-{ "this_is_num1_test_for_num2": "Dies ist {num1} ein Test für {num2}." }
+{ "this_is_{num1}_test_for_{num2}.": "Dies ist {num1} ein Test für {num2}." }
