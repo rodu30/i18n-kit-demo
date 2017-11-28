@@ -7,40 +7,40 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentLocale: this.props.myI18n.locale
+      currentLocale: this.props.i18n.locale
     };
   }
 
   handleChangeToDE = () => {
-    this.props.myI18n.setLocale('de-DE');
+    this.props.i18n.setLocale('de-DE');
     this.setState({ currentLocale: 'de-DE' });
   };
 
   handleChangeToEN = () => {
-    this.props.myI18n.setLocale('en-US');
+    this.props.i18n.setLocale('en-US');
     this.setState({ currentLocale: 'en-US' });
   };
 
   handleChangeToDefault = () => {
-    this.props.myI18n.setLocaleToDefault();
+    this.props.i18n.setLocaleToDefault();
     this.setState({ currentLocale: 'default' });
   };
 
   render() {
-    const { myI18n } = this.props;
+    const { i18n } = this.props;
     // TODO: global festlegen
     const { currentLocale } = this.state;
 
-    const number = myI18n.formatNumber(3500);
-    const money = myI18n.formatNumber(29.99, { style: 'currency', currency: 'USD' });
+    const number = i18n.formatNumber(3500);
+    const money = i18n.formatNumber(29.99, { style: 'currency', currency: 'USD' });
 
-    const now = myI18n.formatDateTime(new Date(), {
+    const now = i18n.formatDateTime(new Date(), {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric'
     });
-    const nowWithTime = myI18n.formatDateTime(new Date());
-    const nowInPerth = myI18n.formatDateTime(new Date(), {
+    const nowWithTime = i18n.formatDateTime(new Date());
+    const nowInPerth = i18n.formatDateTime(new Date(), {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric',
@@ -48,19 +48,19 @@ class App extends Component {
       timeZoneName: 'short'
     });
 
-    // const fm = myI18n.formatMessage;
+    // const fm = i18n.formatMessage;
     // const fm = (strings, ...rest) => console.log(strings, rest);
 
-    const testText = myI18n.formatMessage(
-      myI18n.translateMessage('This is {num1} test for {num2}.'),
+    const testText = i18n.formatMessage(
+      i18n.translateMessage('This is {num1} test for {num2}.', { namespace: 'number' }),
       {
         num1: 1,
         num2: 2
       }
     );
-    const failingTestText = myI18n.translateMessage('This is another test.', {
-      messageLocale: 'en-US'
-      // disableWarnings: true
+    const failingTestText = i18n.translateMessage('This is another test.', {
+      messageLocale: 'en-US',
+      disableWarnings: true
     });
 
     return (
@@ -75,8 +75,8 @@ class App extends Component {
         <button
           onClick={this.handleChangeToDE}
           style={{
-            background: myI18n.locale === 'de-DE' && 'blue',
-            color: myI18n.locale === 'de-DE' && '#fff'
+            background: i18n.locale === 'de-DE' && 'blue',
+            color: i18n.locale === 'de-DE' && '#fff'
           }}
         >
           DE
@@ -84,8 +84,8 @@ class App extends Component {
         <button
           onClick={this.handleChangeToEN}
           style={{
-            background: myI18n.locale === 'en-US' && 'blue',
-            color: myI18n.locale === 'en-US' && '#fff'
+            background: i18n.locale === 'en-US' && 'blue',
+            color: i18n.locale === 'en-US' && '#fff'
           }}
         >
           EN
@@ -97,7 +97,7 @@ class App extends Component {
             color: currentLocale === 'default' && '#fff'
           }}
         >
-          Browser Default: {myI18n.defaultLocale}
+          Browser Default: {i18n.defaultLocale}
         </button>
         <h3>Numbers</h3>
         <p>{number}</p>

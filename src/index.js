@@ -31,5 +31,5 @@ const options = {
 const myI18n = new I18n(messages, defaultLocale, messageLocale, options);
 // console.log(myI18n);
 
-ReactDOM.render(<App myI18n={myI18n} />, document.getElementById('root'));
+ReactDOM.render(<App i18n={myI18n} />, document.getElementById('root'));
 registerServiceWorker();

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "i18n-kit": "git+ssh://git@github.com:rodu30/i18n-kit.git",
+    "i18n-scanner": "git+ssh://git@github.com:rodu30/i18n-scanner.git",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"
