@@ -1423,6 +1423,10 @@ commander@2.11.x, commander@~2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
+commander@^2.12.1:
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -3063,11 +3067,16 @@ https-browserify@^1.0.0:
 
 "i18n-kit@git+ssh://git@github.com:rodu30/i18n-kit.git":
   version "0.1.0"
-  resolved "git+ssh://git@github.com:rodu30/i18n-kit.git#3259b86f3155a4e090479dee0234330d515ea657"
+  resolved "git+ssh://git@github.com:rodu30/i18n-kit.git#d560635a15fbcea77ecb6ee4f95e837c1ccf7a2f"
 
 "i18n-scanner@git+ssh://git@github.com:rodu30/i18n-scanner.git":
   version "0.1.0"
-  resolved "git+ssh://git@github.com:rodu30/i18n-scanner.git#829f8477c8e49eccb179dc89fe0a431e0ca15266"
+  resolved "git+ssh://git@github.com:rodu30/i18n-scanner.git#91c6fced040e3c9593b8588f113b22767f09529f"
+  dependencies:
+    babel-traverse "^6.26.0"
+    babylon "^6.18.0"
+    commander "^2.12.1"
+    recursive-readdir "^2.2.1"
 
 iconv-lite@0.4.19, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.19"
@@ -5254,7 +5263,7 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-recursive-readdir@2.2.1:
+recursive-readdir@2.2.1, recursive-readdir@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/recursive-readdir/-/recursive-readdir-2.2.1.tgz#90ef231d0778c5ce093c9a48d74e5c5422d13a99"
   dependencies:

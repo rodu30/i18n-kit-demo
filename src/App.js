@@ -51,17 +51,20 @@ class App extends Component {
     // const fm = i18n.formatMessage;
     // const fm = (strings, ...rest) => console.log(strings, rest);
 
-    const testText = i18n.formatMessage(
+    const testText1 = i18n.formatMessage(
       i18n.translateMessage('This is {num1} test for {num2}.', { namespace: 'number' }),
       {
         num1: 1,
         num2: 2
       }
     );
-    const failingTestText = i18n.translateMessage('This is another test.', {
+    const testText2 = i18n.translateMessage('This is another test.', {
       messageLocale: 'en-US',
-      disableWarnings: true
+      disableWarnings: true,
+      description: 'It has a description'
     });
+
+    const duplicateOfTestText2 = i18n.translateMessage('This is another test.');
 
     return (
       <div className="App">
@@ -107,8 +110,8 @@ class App extends Component {
         <p>{nowWithTime}</p>
         <p>{nowInPerth}</p>
         <h3>Text</h3>
-        <p>{testText}</p>
-        <p>{failingTestText}</p>
+        <p>{testText1}</p>
+        <p>{testText2}</p>
         {/* <p>{fm`${0}Text formatted ${1} with ${2} tagged template literal`}</p> */}
       </div>
     );
