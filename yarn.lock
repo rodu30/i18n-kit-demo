@@ -3065,18 +3065,19 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-"i18n-kit@git+ssh://git@github.com:rodu30/i18n-kit.git":
+"i18n-cli@git+ssh://git@github.com:rodu30/i18n-cli.git":
   version "0.1.0"
-  resolved "git+ssh://git@github.com:rodu30/i18n-kit.git#d560635a15fbcea77ecb6ee4f95e837c1ccf7a2f"
-
-"i18n-scanner@git+ssh://git@github.com:rodu30/i18n-scanner.git":
-  version "0.1.0"
-  resolved "git+ssh://git@github.com:rodu30/i18n-scanner.git#91c6fced040e3c9593b8588f113b22767f09529f"
+  resolved "git+ssh://git@github.com:rodu30/i18n-cli.git#5d7f86e73086dfe650553cbcb1aa3aef2e38f317"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
+    chalk "^2.3.0"
     commander "^2.12.1"
     recursive-readdir "^2.2.1"
+
+"i18n-kit@git+ssh://git@github.com:rodu30/i18n-kit.git":
+  version "0.1.0"
+  resolved "git+ssh://git@github.com:rodu30/i18n-kit.git#d560635a15fbcea77ecb6ee4f95e837c1ccf7a2f"
 
 iconv-lite@0.4.19, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.19"

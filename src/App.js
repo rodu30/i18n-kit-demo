@@ -61,10 +61,16 @@ class App extends Component {
     const testText2 = i18n.translateMessage('This is another test.', {
       messageLocale: 'en-US',
       disableWarnings: true,
-      description: 'It has a description'
+      description: 'foo'
     });
 
-    const duplicateOfTestText2 = i18n.translateMessage('This is another test.');
+    const duplicateOfTestText2 = i18n.translateMessage('This is another test.', {
+      description: 'bar'
+    });
+
+    const duplicate2OfTestText2 = i18n.translateMessage('This is another test.', {
+      description: 'bar'
+    });
 
     return (
       <div className="App">
@@ -112,6 +118,8 @@ class App extends Component {
         <h3>Text</h3>
         <p>{testText1}</p>
         <p>{testText2}</p>
+        <p>{duplicateOfTestText2}</p>
+        <p>{duplicate2OfTestText2}</p>
         {/* <p>{fm`${0}Text formatted ${1} with ${2} tagged template literal`}</p> */}
       </div>
     );

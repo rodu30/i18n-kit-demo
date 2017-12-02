@@ -1,1 +1,14 @@
-{ "this_is_{num1}_test_for_{num2}.": "This is {num1} test for {num2}." }
+{
+  "this_is_{num1}_test_for_{num2}.": {
+    "message": "This is {num1} test for {num2}.",
+    "contexts": [{ "file": "src/App.js", "line": 55, "column": 6 }]
+  },
+  "this_is_another_test.": {
+    "message": "This is another test.",
+    "contexts": [
+      { "file": "src/App.js", "line": 61, "column": 22, "description": "foo" },
+      { "file": "src/App.js", "line": 67, "column": 33, "description": "bar" },
+      { "file": "src/App.js", "line": 71, "column": 34, "description": "bar" }
+    ]
+  }
+}
