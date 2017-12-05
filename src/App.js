@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { formatNumber, formatDateTime, formatMessage } from 'i18n-kit';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,17 +11,17 @@ class App extends Component {
   }
 
   handleChangeToDE = () => {
-    this.props.i18n.setLocale('de-DE');
+    this.props.i18n.locale = 'de-DE';
     this.setState({ currentLocale: 'de-DE' });
   };
 
   handleChangeToEN = () => {
-    this.props.i18n.setLocale('en-US');
+    this.props.i18n.locale = 'en-US';
     this.setState({ currentLocale: 'en-US' });
   };
 
   handleChangeToDefault = () => {
-    this.props.i18n.setLocaleToDefault();
+    this.props.i18n.locale = null;
     this.setState({ currentLocale: 'default' });
   };
 
@@ -31,16 +30,15 @@ class App extends Component {
     // TODO: global festlegen
     const { currentLocale } = this.state;
 
-    const number = i18n.formatNumber(3500);
-    const money = i18n.formatNumber(29.99, { style: 'currency', currency: 'USD' });
+    const number = i18n.n(3500);
+    const percent = i18n.p(95);
+    const money = i18n.c(29.999);
 
-    const now = i18n.formatDateTime(new Date(), {
-      hour: 'numeric',
-      minute: 'numeric',
+    const nowTime = i18n.t(new Date(), {
       second: 'numeric'
     });
-    const nowWithTime = i18n.formatDateTime(new Date());
-    const nowInPerth = i18n.formatDateTime(new Date(), {
+    const nowDate = i18n.d(new Date());
+    const nowInPerth = i18n.t(new Date(), {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric',
@@ -48,29 +46,21 @@ class App extends Component {
       timeZoneName: 'short'
     });
 
-    // const fm = i18n.formatMessage;
-    // const fm = (strings, ...rest) => console.log(strings, rest);
+    const testText1 = i18n.m(`This is {num1} test for {num2}.`, {
+      description: 'number',
+      num1: 1,
+      num2: 2
+    });
 
-    const testText1 = i18n.formatMessage(
-      i18n.translateMessage('This is {num1} test for {num2}.', { namespace: 'number' }),
-      {
-        num1: 1,
-        num2: 2
-      }
-    );
-    const testText2 = i18n.translateMessage('This is another test.', {
-      messageLocale: 'en-US',
-      disableWarnings: true,
+    const testText2 = i18n.m('This is another test.', {
       description: 'foo'
     });
 
-    const duplicateOfTestText2 = i18n.translateMessage('This is another test.', {
+    const duplicateOfTestText2 = i18n.m('This is another test.', {
       description: 'bar'
     });
 
-    const duplicate2OfTestText2 = i18n.translateMessage('This is another test.', {
-      description: 'bar'
-    });
+    const testText3 = i18n.m('Hello!');
 
     return (
       <div className="App">
@@ -110,17 +100,17 @@ class App extends Component {
         </button>
         <h3>Numbers</h3>
         <p>{number}</p>
+        <p>{percent}</p>
         <p>{money}</p>
         <h3>DateTime</h3>
-        <p>{now}</p>
-        <p>{nowWithTime}</p>
+        <p>{nowTime}</p>
+        <p>{nowDate}</p>
         <p>{nowInPerth}</p>
         <h3>Text</h3>
         <p>{testText1}</p>
         <p>{testText2}</p>
         <p>{duplicateOfTestText2}</p>
-        <p>{duplicate2OfTestText2}</p>
-        {/* <p>{fm`${0}Text formatted ${1} with ${2} tagged template literal`}</p> */}
+        <p>{testText3}</p>
       </div>
     );
   }
