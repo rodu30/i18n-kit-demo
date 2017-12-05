@@ -11,9 +11,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build":
+      "i18n ext -o src en-US src/i18n && i18n merge src/i18n/en-US.json src/i18n && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "l10n": "i18n ext -o src en-US src/i18n && i18n merge src/i18n/en-US.json src/i18n"
   },
   "eslintConfig": {
     "extends": "react-app"

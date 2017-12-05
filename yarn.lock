@@ -1339,6 +1339,12 @@ cli-cursor@^2.1.0:
   dependencies:
     restore-cursor "^2.0.0"
 
+cli-table@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.1.tgz#f53b05266a8b1a0b934b3d0821e6e2dc5914ae23"
+  dependencies:
+    colors "1.0.3"
+
 cli-width@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
@@ -1408,6 +1414,10 @@ colormin@^1.0.5:
     color "^0.11.0"
     css-color-names "0.0.4"
     has "^1.0.1"
+
+colors@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
 colors@~1.1.2:
   version "1.1.2"
@@ -3067,11 +3077,12 @@ https-browserify@^1.0.0:
 
 "i18n-cli@git+ssh://git@github.com:rodu30/i18n-cli.git":
   version "0.1.0"
-  resolved "git+ssh://git@github.com:rodu30/i18n-cli.git#5d7f86e73086dfe650553cbcb1aa3aef2e38f317"
+  resolved "git+ssh://git@github.com:rodu30/i18n-cli.git#74388e656b86cce204ff16a0503732bca82175f5"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
     chalk "^2.3.0"
+    cli-table "^0.3.1"
     commander "^2.12.1"
     recursive-readdir "^2.2.1"
 
