@@ -1,0 +1,17 @@
+{
+  "this_is_{num1}_test_for_{num2}.": {
+    "message": "This is {num1} test for {num2}.",
+    "contexts": [{ "file": "src/App.js", "line": 49, "column": 22, "description": "number" }]
+  },
+  "this_is_another_test.": {
+    "message": "This is another test.",
+    "contexts": [
+      { "file": "src/App.js", "line": 55, "column": 22, "description": "foo" },
+      { "file": "src/App.js", "line": 59, "column": 33, "description": "bar" }
+    ]
+  },
+  "hello!": {
+    "message": "Hello!",
+    "contexts": [{ "file": "src/App.js", "line": 63, "column": 22 }]
+  }
+}

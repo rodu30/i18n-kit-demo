@@ -1,0 +1,19 @@
+{
+  "this_is_{num1}_test_for_{num2}.": {
+    "message": "Dies ist {num1} Test für {num2}.",
+    "contexts": [{ "file": "src/App.js", "line": 55, "column": 6 }]
+  },
+  "this_is_another_test.": {
+    "message": null,
+    "contexts": [
+      { "file": "src/App.js", "line": 55, "column": 22, "description": "foo" },
+      { "file": "src/App.js", "line": 59, "column": 33, "description": "bar" }
+    ],
+    "flag": "MISSING"
+  },
+  "hello!": {
+    "message": null,
+    "contexts": [{ "file": "src/App.js", "line": 63, "column": 22 }],
+    "flag": "MISSING"
+  }
+}
