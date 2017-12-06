@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "i18n-cli": "git+ssh://git@github.com:rodu30/i18n-cli.git",
+    "i18n-cli": "git+ssh://git@github.com/rodu30/i18n-cli.git",
     "i18n-kit": "git+ssh://git@github.com:rodu30/i18n-kit.git",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -11,8 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build":
-      "i18n ext -o src en-US src/i18n && i18n merge src/i18n/en-US.json src/i18n && react-scripts build",
+    "build": "i18n ext -o src en-US src/i18n && i18n merge src/i18n/en-US.json src/i18n && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "l10n": "i18n ext -o src en-US src/i18n && i18n merge src/i18n/en-US.json src/i18n"
