@@ -1,17 +1,1 @@
-{
-  "this_is_{num1}_test_for_{num2}.": {
-    "message": "This is {num1} test for {num2}.",
-    "contexts": [{ "file": "src/App.js", "line": 49, "column": 22, "description": "number" }]
-  },
-  "this_is_another_test.": {
-    "message": "This is another test.",
-    "contexts": [
-      { "file": "src/App.js", "line": 55, "column": 22, "description": "foo" },
-      { "file": "src/App.js", "line": 59, "column": 33, "description": "bar" }
-    ]
-  },
-  "hello!": {
-    "message": "Hello!",
-    "contexts": [{ "file": "src/App.js", "line": 63, "column": 22 }]
-  }
-}
+{"examples_with_higher_order_component":{"message":"Examples with higher order component","contexts":[{"file":"src/components/ExampleWithHOC.js","line":7,"column":9}]},"this_is_{num1}_example_for_{num2}_variables.":{"message":"This is {num1} example for {num2} variables.","contexts":[{"file":"src/components/ExampleWithHOC.js","line":30,"column":7,"description":"number"}]},"this_is_a_example_for_duplicated_message.":{"message":"This is a example for duplicated message.","contexts":[{"file":"src/components/ExampleWithHOC.js","line":37,"column":7,"description":"foo"},{"file":"src/components/ExampleWithHOC.js","line":42,"column":7,"description":"bar"}]},"examples_with_render_prop":{"message":"Examples with render prop","contexts":[{"file":"src/components/ExampleWithRenderProp.js","line":8,"column":13}]},"lorem_ipsum_dolor_sit_amet,_consetetur_sadipscing_elitr,_sed_diam_nonumy_eirmod_tempor_invidunt_ut_labore_et_dolore_magna_aliquyam_erat,_sed_diam_voluptua._at_vero_eos_et_accusam_et_justo_duo_dolores_et_ea_rebum.":{"message":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.","contexts":[{"file":"src/components/ExampleWithRenderProp.js","line":11,"column":11}]}}

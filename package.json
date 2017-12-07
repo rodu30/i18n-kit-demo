@@ -5,18 +5,18 @@
   "dependencies": {
     "i18n-cli": "git+ssh://git@github.com/rodu30/i18n-cli.git",
     "i18n-kit": "git+ssh://git@github.com:rodu30/i18n-kit.git",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build":
-      "node_modules/.bin/i18n ext -o src en-US src/messages && node_modules/.bin/i18n merge src/messages/en-US.json src/messages && react-scripts build",
+    "build": "yarn extract && yarn merge && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "l10n":
-      "node_modules/.bin/i18n ext -o src en-US src/messages && node_modules/.bin/i18n merge src/messages/en-US.json src/messages"
+    "extract": "node_modules/.bin/i18n ext src en-US src/messages",
+    "merge": "node_modules/.bin/i18n merge -r src/messages/en-US.json src/messages"
   },
   "eslintConfig": {
     "extends": "react-app"
