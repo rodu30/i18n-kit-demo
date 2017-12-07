@@ -10,7 +10,9 @@ Clone repository and `npm install` packages.
 
 ### CLI
 
-Use the command '`node_modules/.bin/i18n`' from within the project or install globally:
+You can use the commands `npm run merge` and `npm run extract` to run the CLI tasks with some default arguments.
+
+If you want to use the CLI directly you can either use it with command `node_modules/.bin/i18n` from within the project or install globally:
 
 ```bash
 $ cd node_modules/i18n-cli && npm install -g
