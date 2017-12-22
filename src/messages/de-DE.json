@@ -1,1 +1,60 @@
-{"hello!":{"message":null,"contexts":[{"file":"src/App.js","line":63,"column":22}],"flag":"UNUSED"},"lorem_ipsum_dolor_sit_amet,_consetetur_sadipscing_elitr,_sed_diam_nonumy_eirmod_tempor_invidunt_ut_labore_et_dolore_magna_aliquyam_erat,_sed_diam_voluptua._at_vero_eos_et_accusam_et_justo_duo_dolores_et_ea_rebum.":{"message":null,"contexts":[{"file":"src/components/ExampleWithRenderProp.js","line":11,"column":11}],"flag":"MISSING"},"examples_with_higher_order_component":{"message":"Beispiele mit Higher Order Component","contexts":[{"file":"src/components/ExampleWithHOC.js","line":7,"column":9}]},"examples_with_render_prop":{"message":"Beispiele mit render prop","contexts":[{"file":"src/components/ExampleWithRenderProp.js","line":8,"column":13}]},"this_is_{num1}_example_for_{num2}_variables.":{"message":"Dies ist {num1} Beispiel für {num2} Variablen.","contexts":[{"file":"src/components/ExampleWithHOC.js","line":30,"column":7,"description":"number"}]},"this_is_a_example_for_duplicated_message.":{"message":"Dies ist ein Beispiel für doppelte Messages.","contexts":[{"file":"src/components/ExampleWithHOC.js","line":37,"column":7,"description":"foo"},{"file":"src/components/ExampleWithHOC.js","line":42,"column":7,"description":"bar"}]}}
+{
+  "hello!": {
+    "message": null,
+    "contexts": [{ "file": "src/App.js", "line": 63, "column": 22 }],
+    "flag": "UNUSED"
+  },
+  "Examples with higher order component": {
+    "message": "Beispiele mit Higher Order Component",
+    "contexts": [{ "file": "src/components/ExampleWithHOC.js", "line": 7, "column": 9 }]
+  },
+  "This is {num1} example for {num2} variables.": {
+    "message": "Dies ist {num1} Beispiel für {num2} Variablen.",
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithHOC.js",
+        "line": 30,
+        "column": 7,
+        "description": "number"
+      }
+    ]
+  },
+  "Examples with render prop": {
+    "message": "Beispiele mit render prop",
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 22, "column": 17 }]
+  },
+  "This is an example for duplicated message.": {
+    "message": "Dies ist ein Beispiel für doppelte Messages.",
+    "contexts": [
+      { "file": "src/components/ExampleWithHOC.js", "line": 37, "column": 7, "description": "foo" },
+      { "file": "src/components/ExampleWithHOC.js", "line": 42, "column": 7, "description": "bar" }
+    ]
+  },
+  "This is an example for a missing translation.": {
+    "message": null,
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 24, "column": 16 }],
+    "flag": "MISSING"
+  },
+  "This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.": {
+    "message":
+      "Dies {examples, plural, =0{ist kein Beispiel} one{ist ein Beispiel} other{sind Beispiele} } für Plurals und Reihenfolgen: {order, selectordinal, other{#.} } Ordnung.",
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 26, "column": 15 }]
+  },
+  "This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.": {
+    "message":
+      "Dies ist ein Beispiel für Geschlechter-Auswahl: {gender, select, male{Er mag} female{Sie mag} other{Sie mögen} } es.",
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 60, "column": 15 }]
+  },
+  "Female": {
+    "message": "Weiblich",
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 70, "column": 19 }]
+  },
+  "Male": {
+    "message": "Männlich",
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 75, "column": 19 }]
+  },
+  "Other": {
+    "message": "Andere",
+    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 80, "column": 19 }]
+  }
+}

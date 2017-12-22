@@ -34,12 +34,12 @@ const ExampleWithHOC = ({ i18n }) => (
       })}
     </p>
     <p>
-      {i18n.m('This is a example for duplicated message.', {
+      {i18n.m('This is an example for duplicated message.', {
         description: 'foo'
       })}
     </p>
     <p>
-      {i18n.m('This is a example for duplicated message.', {
+      {i18n.m('This is an example for duplicated message.', {
         description: 'bar'
       })}
     </p>
