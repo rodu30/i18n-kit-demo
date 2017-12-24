@@ -1,6 +1,6 @@
 {
   "name": "i18n-kit-demo",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
     "i18n-cli": "git+ssh://git@github.com/rodu30/i18n-cli.git",
@@ -15,8 +15,11 @@
     "build": "yarn extract && yarn merge && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "extract": "node_modules/.bin/i18n ext src en-US src/messages",
-    "merge": "node_modules/.bin/i18n merge -r src/messages/en-US.json src/messages"
+    "messages:extract": "node_modules/.bin/i18n ext src en-US src/messages",
+    "messages:merge": "node_modules/.bin/i18n merge -r src/messages/en-US.json src/messages",
+    "messages:export": "node_modules/.bin/i18n convert -o src/messages src/phraseApp/out",
+    "messages:import":
+      "node_modules/.bin/i18n convert -i src/phraseApp/in src/messages && node_modules/.bin/i18n merge -r src/messages/en-US.json src/messages"
   },
   "eslintConfig": {
     "extends": "react-app"
