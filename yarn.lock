@@ -3091,8 +3091,8 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
 "i18n-cli@git+ssh://git@github.com/rodu30/i18n-cli.git":
-  version "0.2.0"
-  resolved "git+ssh://git@github.com/rodu30/i18n-cli.git#18fc06f9e88fc44ed20fccbe9f1b7d15ce5351eb"
+  version "0.2.1"
+  resolved "git+ssh://git@github.com/rodu30/i18n-cli.git#6d9668544f5dfd30be6af7786f7723a01d0e222a"
   dependencies:
     babel-traverse "^6.26.0"
     babylon "^6.18.0"
