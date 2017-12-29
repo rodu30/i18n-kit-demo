@@ -10,16 +10,22 @@
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"
   },
+  "devDependencies": {
+    "prettier-eslint-cli": "^4.7.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "yarn extract && yarn merge && react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "format": "prettier-eslint --write \"src/**/*.js\"",
     "eject": "react-scripts eject",
-    "messages:extract": "i18n extract src en-US src/messages",
-    "messages:merge": "i18n merge -r src/messages/en-US.json src/messages",
+    "messages:extract":
+      "i18n extract src en-US src/messages && prettier-eslint --write \"src/messages/*.json\"",
+    "messages:merge":
+      "i18n merge -r src/messages/en-US.json src/messages && prettier-eslint --write \"src/messages/*.json\"",
     "messages:export": "i18n convert -o src/messages src/phraseApp/out",
     "messages:import":
-      "i18n convert -i src/phraseApp/in src/messages && i18n merge -r src/messages/en-US.json src/messages"
+      "i18n convert -i src/phraseApp/in src/messages && i18n merge -r src/messages/en-US.json src/messages && prettier-eslint --write \"src/messages/*.json\""
   },
   "eslintConfig": {
     "extends": "react-app"
