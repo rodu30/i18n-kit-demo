@@ -1,6 +1,6 @@
 {
   "name": "i18n-kit-demo",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "dependencies": {
     "i18n-cli": "git+ssh://git@github.com/rodu30/i18n-cli.git",
