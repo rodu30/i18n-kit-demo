@@ -3193,8 +3193,8 @@ https-browserify@^1.0.0:
     recursive-readdir "^2.2.1"
 
 "i18n-kit@git+ssh://git@github.com:rodu30/i18n-kit.git":
-  version "0.2.0"
-  resolved "git+ssh://git@github.com:rodu30/i18n-kit.git#13664425a002924dcfdc2d8a80533fb6c3b926a9"
+  version "0.2.1"
+  resolved "git+ssh://git@github.com:rodu30/i18n-kit.git#67b08b06c0fa88dfe8e72f8be6ecebd9e7851fc1"
   dependencies:
     messageformat "^1.1.0"
 
