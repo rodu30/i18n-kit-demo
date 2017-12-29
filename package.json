@@ -18,14 +18,14 @@
     "build": "yarn extract && yarn merge && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "format": "prettier-eslint --write \"src/**/*.js\"",
+    "format:messages": "prettier-eslint --write \"src/messages/*.json\"",
     "eject": "react-scripts eject",
-    "messages:extract":
-      "i18n extract src en-US src/messages && prettier-eslint --write \"src/messages/*.json\"",
-    "messages:merge":
-      "i18n merge -r src/messages/en-US.json src/messages && prettier-eslint --write \"src/messages/*.json\"",
-    "messages:export": "i18n convert -o src/messages src/phraseApp/out",
+    "messages:extract": "i18n extract src en-US src/messages && yarn format:messages",
+    "messages:merge": "i18n merge -r src/messages/en-US.json src/messages && yarn format:messages",
+    "messages:export":
+      "i18n convert -o src/messages src/phraseApp/out && prettier-eslint --write \"src/phraseApp/out/*.json\"",
     "messages:import":
-      "i18n convert -i src/phraseApp/in src/messages && i18n merge -r src/messages/en-US.json src/messages && prettier-eslint --write \"src/messages/*.json\""
+      "i18n convert -i src/phraseApp/in src/messages && i18n merge -r src/messages/en-US.json src/messages && yarn format:messages"
   },
   "eslintConfig": {
     "extends": "react-app"

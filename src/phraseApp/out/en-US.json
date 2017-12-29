@@ -1,1 +1,14 @@
-{"Examples with higher order component":"Examples with higher order component","This is {num1} example for {num2} variables.":"This is {num1} example for {num2} variables.","This is an example for duplicated message.":"This is an example for duplicated message.","Examples with render prop":"Examples with render prop","This is an example for a missing translation.":"This is an example for a missing translation.","This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.":"This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.","This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.":"This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.","Female":"Female","Male":"Male","Other":"Other"}
+{
+  "Examples with higher order component": "Examples with higher order component",
+  "This is {num1} example for {num2} variables.": "This is {num1} example for {num2} variables.",
+  "This is an example for duplicated message.": "This is an example for duplicated message.",
+  "Examples with render prop": "Examples with render prop",
+  "This is an example for a missing translation.": "This is an example for a missing translation.",
+  "This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.":
+    "This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.",
+  "This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.":
+    "This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.",
+  "Female": "Female",
+  "Male": "Male",
+  "Other": "Other"
+}

@@ -1,7 +1,9 @@
 {
   "Examples with higher order component": {
     "message": "Examples with higher order component",
-    "contexts": [{ "file": "src/components/ExampleWithHOC.js", "line": 7, "column": 9 }]
+    "contexts": [
+      { "file": "src/components/ExampleWithHOC.js", "line": 7, "column": 9 }
+    ]
   },
   "This is {num1} example for {num2} variables.": {
     "message": "This is {num1} example for {num2} variables.",
@@ -17,38 +19,90 @@
   "This is an example for duplicated message.": {
     "message": "This is an example for duplicated message.",
     "contexts": [
-      { "file": "src/components/ExampleWithHOC.js", "line": 37, "column": 7, "description": "foo" },
-      { "file": "src/components/ExampleWithHOC.js", "line": 42, "column": 7, "description": "bar" }
+      {
+        "file": "src/components/ExampleWithHOC.js",
+        "line": 37,
+        "column": 7,
+        "description": "foo"
+      },
+      {
+        "file": "src/components/ExampleWithHOC.js",
+        "line": 42,
+        "column": 7,
+        "description": "bar"
+      }
     ]
   },
   "Examples with render prop": {
     "message": "Examples with render prop",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 22, "column": 17 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 22,
+        "column": 17
+      }
+    ]
   },
   "This is an example for a missing translation.": {
     "message": "This is an example for a missing translation.",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 24, "column": 16 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 24,
+        "column": 16
+      }
+    ]
   },
   "This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.": {
     "message":
       "This {examples, plural, =0{is no example} one{is an example} other{are examples} } for plurals and ordinals: {order, selectordinal, =1{#st} =2{#nd} =3{#rd} other{#th} } order.",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 26, "column": 15 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 26,
+        "column": 15
+      }
+    ]
   },
   "This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.": {
     "message":
       "This is an example for gender selection: {gender, select, male{He likes} female{She likes} other{They like} } it.",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 60, "column": 15 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 60,
+        "column": 15
+      }
+    ]
   },
   "Female": {
     "message": "Female",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 70, "column": 19 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 70,
+        "column": 19
+      }
+    ]
   },
   "Male": {
     "message": "Male",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 75, "column": 19 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 75,
+        "column": 19
+      }
+    ]
   },
   "Other": {
     "message": "Other",
-    "contexts": [{ "file": "src/components/ExampleWithRenderProp.js", "line": 80, "column": 19 }]
+    "contexts": [
+      {
+        "file": "src/components/ExampleWithRenderProp.js",
+        "line": 80,
+        "column": 19
+      }
+    ]
   }
 }
