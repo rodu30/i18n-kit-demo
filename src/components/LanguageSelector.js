@@ -6,13 +6,19 @@ const LanguageSelector = props => (
   <I18nGetter>
     {i18n => (
       <div style={{ margin: '1rem' }}>
-        <Button onClick={() => (i18n.locale = 'de-DE')} selected={i18n.locale === 'de-DE'}>
+        <Button
+          onClick={() => (i18n.locale = 'de-DE')}
+          selected={i18n.locale === 'de-DE' || i18n.locale === 'de'}>
           DE
         </Button>
-        <Button onClick={() => (i18n.locale = 'en-US')} selected={i18n.locale === 'en-US'}>
+        <Button
+          onClick={() => (i18n.locale = 'en-US')}
+          selected={i18n.locale === 'en-US' || i18n.locale === 'en'}>
           EN
         </Button>
-        <Button onClick={() => (i18n.locale = 'es-ES')} selected={i18n.locale === 'es-ES'}>
+        <Button
+          onClick={() => (i18n.locale = 'es-ES')}
+          selected={i18n.locale === 'es-ES' || i18n.locale === 'es'}>
           ES
         </Button>
         <Button

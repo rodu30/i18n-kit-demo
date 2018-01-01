@@ -1,6 +1,6 @@
 {
   "name": "i18n-kit-demo",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "dependencies": {
     "i18n-cli": "git+ssh://git@github.com/rodu30/i18n-cli.git",
@@ -22,8 +22,10 @@
     "eject": "react-scripts eject",
     "messages:extract": "i18n extract src en-US src/messages && yarn format:messages",
     "messages:merge": "i18n merge -r src/messages/en-US.json src/messages && yarn format:messages",
-    "messages:export": "i18n convert -o src/messages src/phraseApp/out && prettier-eslint --write \"src/phraseApp/out/*.json\"",
-    "messages:import": "i18n convert -i src/phraseApp/in src/messages && i18n merge -r src/messages/en-US.json src/messages && yarn format:messages"
+    "messages:export":
+      "i18n convert -o src/messages src/phraseApp/out && prettier-eslint --write \"src/phraseApp/out/*.json\"",
+    "messages:import":
+      "i18n convert -i src/phraseApp/in src/messages && i18n merge -r src/messages/en-US.json src/messages && yarn format:messages"
   },
   "eslintConfig": {
     "extends": "react-app"
