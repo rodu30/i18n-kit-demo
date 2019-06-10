@@ -4,6 +4,17 @@ This is a basic [Create React App](https://github.com/facebookincubator/create-r
 demonstrate the usage of the [**i18n-kit**](https://github.com/rodu30/i18n-kit) and
 [**i18n-cli**](https://github.com/rodu30/i18n-cli). See READMEs for more details.
 
+Content:
+
+1. [Prerequisites](#prerequisites)
+2. [Getting Started](#getting-started)
+3. [CLI](#cli)
+4. [Usage](#usage)
+
+## Prerequisites
+
+[Node.js](https://nodejs.org/en/)
+
 ## Getting started
 
 Clone repository and `npm install` packages.
